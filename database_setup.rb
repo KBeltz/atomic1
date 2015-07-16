@@ -10,6 +10,7 @@ unless ActiveRecord::Base.connection.table_exists?(:photos)
   ActiveRecord::Base.connection.create_table :photos do |t|
     t.text :title
     t.integer :photographer_id
+    t.integer :album_id
   end
 end
 
