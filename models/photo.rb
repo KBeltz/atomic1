@@ -1,4 +1,4 @@
 class Photo < ActiveRecord::Base
   belongs_to :photographer
-  has_many :albums
+  has_and_belongs_to_many :albums
 end
