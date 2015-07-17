@@ -28,10 +28,6 @@ get "/update_photos" do
   erb :"/photos/update_photos"
 end
 
-# get "/edit_photo_row" do
-#
-# end
-
 get "/delete_photos" do
   erb :"/photos/delete_photos"
 end
