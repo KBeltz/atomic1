@@ -1,2 +1,7 @@
 Albums with <%= @item.title %>
-<%= @item.albums %>
+<% list = @item.albums %>
+<% list.each do |a| %>
+<ul>
+  <li><%= a.album_title %></li>
+</ul>
+<% end %>

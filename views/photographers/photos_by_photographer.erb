@@ -1,2 +1,7 @@
 Photos by <%= @item.name %>
-<%= @item.photos %>
+<% list = @item.photos %>
+<% list.each do |a| %>
+<ul>
+  <li><%= a.title %></li>
+</ul>
+<% end %>
