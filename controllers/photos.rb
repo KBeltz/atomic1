@@ -12,8 +12,7 @@ get "/save_photo" do
 end
 
 get "/read_photos" do
-  # Photographer.all
-  # iterate and stuff.
+  erb :"/photos/photos"
 end
 
 get "/update_list" do
@@ -24,14 +23,14 @@ get "/update_photos" do
   erb :"/photos/update_photos"
 end
 
-get "/edit_photo_row" do
-
-end
+# get "/edit_photo_row" do
+#
+# end
 
 get "/delete_photos" do
   erb :"/photos/delete_photos"
 end
 
-get "/delete_photo_row" do
-
-end
+# get "/delete_photo_row" do
+#
+# end

@@ -12,26 +12,25 @@ get "/save_photographer" do
 end
 
 get "/read_photographers" do
-  # Photographer.all
-  # iterate and stuff.
+  erb :"/photographers/photographers"
 end
 
-get "/update_list" do 
-  erb :"/photographers/update_list"
-end
-
-get "/update_photographers" do
-  erb :"/photographers/update_photographers"
-end
-
-get "/edit_photographer_row" do
-
-end
-
-get "/delete_photographers" do
-  erb :"/photographers/delete_photographers"
-end
-
-get "/delete_photographer_row" do
-
-end
+# get "/update_list" do
+#   erb :"/photographers/update_list"
+# end
+#
+# get "/update_photographers" do
+#   erb :"/photographers/update_photographers"
+# end
+#
+# get "/edit_photographer_row" do
+#
+# end
+#
+# get "/delete_photographers" do
+#   erb :"/photographers/delete_photographers"
+# end
+#
+# get "/delete_photographer_row" do
+#
+# end

@@ -1,0 +1,11 @@
+<!-- This seems slow. There should be a better way. -->
+
+<% photos = Photo.all %>
+<% i = 1 %>
+<% while i <= photos.length do %>
+  <% item = Photo.find(i) %>
+  <ul>
+  <li><%= item.title %></li>
+  </ul>
+  <% i += 1 %>
+<% end %>

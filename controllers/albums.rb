@@ -12,8 +12,7 @@ get "/save_album" do
 end
 
 get "/read_albums" do
-  # Photographer.all
-  # iterate and stuff.
+  erb :"albums/albums"
 end
 
 get "/update_list" do
