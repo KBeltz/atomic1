@@ -1,0 +1,11 @@
+<h3>Edit Album</h3>
+
+<form action="/save_edited_album">
+
+  <p><h4>Update album info:</h4></p>
+  <p>Album Title: <input type="text" name="album_title" value="<%= @item.album_title %>"></p>
+
+  <input type="hidden" name="x" value="<%= params["x"] %>">
+
+  <p><input type="submit" value="edit album"></p>
+</form>
