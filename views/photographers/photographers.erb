@@ -1,10 +1,8 @@
 Click on a photographer to see all of his/her photos.
+
 <% photographers = Photographer.all %>
-<% i = 1 %>
-<% while i <= photographers.length do %>
-  <% item = Photographer.find(i) %>
+<% photographers.each do |item| %>
   <ul>
     <li><a href="/photos_by_photographer/<%= item.id %>"><%= item.name %></a></li>
   </ul>
-  <% i += 1 %>
 <% end %>

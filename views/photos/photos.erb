@@ -1,11 +1,7 @@
-<!-- This seems slow. There should be a better way. -->
 Click on a photo to see a list of albums to which it belongs.
 <% photos = Photo.all %>
-<% i = 1 %>
-<% while i <= photos.length do %>
-  <% item = Photo.find(i) %>
+<% photos.each do |item| %>
   <ul>
-  <li><a href="/albums_with_photo/<%= item.id %>"><%= item.title %></a></li>
+    <li><a href="/albums_with_photo/<%= item.id %>"><%= item.title %></a></li>
   </ul>
-  <% i += 1 %>
 <% end %>

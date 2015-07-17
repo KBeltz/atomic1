@@ -1,11 +1,8 @@
 Choose an album to delete
 
 <% albums = Album.all %>
-<% i = 1 %>
-<% while i <= albums.length do %>
-  <% item = Album.find(i) %>
+<% albums.each do |item| %>
   <ul>
     <li><a href="/delete_album_row/<%= item.id %>"><%= item.album_title %></a></li>
   </ul>
-  <% i += 1 %>
 <% end %>
