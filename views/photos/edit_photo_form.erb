@@ -1,0 +1,11 @@
+<h3>Edit Photo</h3>
+
+<form action="/save_edited_photo">
+
+  <p><h4>Update photo info:</h4></p>
+  <p>Photo Title: <input type="text" name="title" value="<%= @item.title %>"></p>
+
+  <input type="hidden" name="x" value="<%= params["x"] %>">
+
+  <p><input type="submit" value="edit photo"></p>
+</form>

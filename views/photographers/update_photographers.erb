@@ -1,6 +1,13 @@
-Edit photographer or add Photo
+Edit photographer
 
-Edit photographer name
+<br>
+choose photographer:
+<% photographers = Photographer.all %>
+<% photographers.each do |item| %>
+    <a href="/edit_photographer_row/<%= item.id %>"><%= item.name %></a>
+<% end %>
+
+<!-- Edit photographer name
 <form action=" ">
   choose photographer
   <input type="text" name="name">
@@ -17,4 +24,4 @@ Assign existing photo by title
 <form action=" ">
   choose photographer
   <input type="text" name="title">
-  <input type="submit" value="add photo to photographer">
+  <input type="submit" value="add photo to photographer"> -->

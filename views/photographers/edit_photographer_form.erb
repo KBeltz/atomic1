@@ -1,0 +1,11 @@
+<h3>Edit Photographer</h3>
+
+<form action="/save_edited_photographer">
+
+  <p><h4>Update photographer info:</h4></p>
+  <p>Name: <input type="text" name="name" value="<%= @item.name %>"></p>
+
+  <input type="hidden" name="x" value="<%= params["x"] %>">
+
+  <p><input type="submit" value="edit photographer"></p>
+</form>

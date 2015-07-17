@@ -20,12 +20,20 @@ get "/albums_with_photo/:x" do
   erb :"/photos/albums_with_photo"
 end
 
-get "/update_list" do
-  erb :"/photos/update_list"
-end
-
 get "/update_photos" do
   erb :"/photos/update_photos"
+end
+
+get "/edit_photo_row/:x" do
+  @item = Photo.find(params["x"])
+  erb :"/photos/edit_photo_form"
+end
+
+get "/save_edited_photo" do
+  @item = Photo.find(params["x"])
+  @item.title = params["title"]
+  @item.save
+  erb :"/photos/photos"
 end
 
 get "/delete_photos" do

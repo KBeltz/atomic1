@@ -1,7 +1,7 @@
-Edit photo title
-
-<form action=" ">
-  choose photo
-  <input type="text" name="title">
-  <input type="submit" value="edit photo">
-</form>
+Edit photo
+<br>
+choose photo:
+<% photos = Photo.all %>
+<% photos.each do |item| %>
+    <a href="/edit_photo_row/<%= item.id %>"><%= item.title %></a>
+<% end %>

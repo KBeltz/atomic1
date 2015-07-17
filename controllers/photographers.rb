@@ -24,6 +24,18 @@ get "/update_photographers" do
   erb :"/photographers/update_photographers"
 end
 
+get "/edit_photographer_row/:x" do
+  @item = Photographer.find(params["x"])
+  erb :"/photographers/edit_photographer_form"
+end
+
+get "/save_edited_photographer" do
+  @item = Photographer.find(params["x"])
+  @item.name = params["name"]
+  @item.save
+  erb :"/photographers/photographers"
+end
+
 get "/delete_photographers" do
   erb :"/photographers/delete_photographers"
 end
