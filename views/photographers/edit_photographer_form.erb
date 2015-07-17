@@ -1,5 +1,6 @@
 <h3>Edit Photographer</h3>
 
+<!-- Edit photographer name -->
 <form action="/save_edited_photographer">
 
   <p><h4>Update photographer info:</h4></p>
@@ -8,4 +9,15 @@
   <input type="hidden" name="x" value="<%= params["x"] %>">
 
   <p><input type="submit" value="edit photographer"></p>
+</form>
+
+<!-- Add new photo to photographer -->
+<form action="/add_new_photo_to_photographer">
+
+  <p><h4>Add new photo:</h4></p>
+  <p>Title: <input type="text" name="title"></p>
+
+  <input type="hidden" name="x" value="<%= params["x"] %>">
+
+  <p><input type="submit" value="add photo"></p>
 </form>

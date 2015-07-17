@@ -36,6 +36,12 @@ get "/save_edited_photographer" do
   erb :"/photographers/photographers"
 end
 
+get "/add_new_photo_to_photographer" do
+  @item = Photographer.find(params["x"])
+  @item.photos.create(title: params["title"])
+  erb :"/photographers/photos_by_photographer"
+end
+
 get "/delete_photographers" do
   erb :"/photographers/delete_photographers"
 end

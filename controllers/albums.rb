@@ -36,6 +36,12 @@ get "/save_edited_album" do
   erb :"/albums/albums"
 end
 
+get "/add_new_photo_to_album" do
+  @item = Album.find(params["x"])
+  @item.photos.create(title: params["title"])
+  erb :"/albums/photos_in_album"
+end
+
 get "/delete_albums" do
   erb :"/albums/delete_albums"
 end
