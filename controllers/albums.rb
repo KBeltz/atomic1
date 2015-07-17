@@ -36,6 +36,8 @@ get "/delete_albums" do
   erb :"/albums/delete_albums"
 end
 
-get "/delete_album_row" do
-
+get "/delete_album_row/:x" do
+  item = Album.find(params["x"])
+  item.destroy
+  erb :"/albums/albums"
 end

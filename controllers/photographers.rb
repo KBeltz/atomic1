@@ -32,10 +32,12 @@ end
 #
 # end
 #
-# get "/delete_photographers" do
-#   erb :"/photographers/delete_photographers"
-# end
-#
-# get "/delete_photographer_row" do
-#
-# end
+get "/delete_photographers" do
+  erb :"/photographers/delete_photographers"
+end
+
+get "/delete_photographer_row/:x" do
+  item = Photographer.find(params["x"])
+  item.destroy
+  erb :"photographers/photographers"
+end

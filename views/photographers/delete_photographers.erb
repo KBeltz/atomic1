@@ -1,1 +1,11 @@
 Choose a photographer to delete:
+
+<% photographers = Photographer.all %>
+<% i = 1 %>
+<% while i <= photographers.length do %>
+  <% item = Photographer.find(i) %>
+  <ul>
+    <li><a href="/delete_photographer_row/<%= item.id %>"><%= item.name %></a></li>
+  </ul>
+  <% i += 1 %>
+<% end %>

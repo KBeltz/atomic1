@@ -36,6 +36,8 @@ get "/delete_photos" do
   erb :"/photos/delete_photos"
 end
 
-# get "/delete_photo_row" do
-#
-# end
+get "/delete_photo_row/:x" do
+  item = Photo.find(params["x"])
+  item.destroy
+  erb :"/photos/photos"
+end
