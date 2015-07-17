@@ -4,6 +4,13 @@
 
   <p><h4>Update photo info:</h4></p>
   <p>Photo Title: <input type="text" name="title" value="<%= @item.title %>"></p>
+  Photographer:
+  <select>
+    <% photographers = Photographer.all %>
+    <% photographers.each do |item| %>
+      <option value="<%= item.id %>"><%= item.name %></option>
+      <% end %>
+  </select>
 
   <input type="hidden" name="x" value="<%= params["x"] %>">
 

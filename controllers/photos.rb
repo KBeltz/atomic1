@@ -32,6 +32,7 @@ end
 get "/save_edited_photo" do
   @item = Photo.find(params["x"])
   @item.title = params["title"]
+  @item.photographer_id = params["photographer_id"]
   @item.save
   erb :"/photos/photos"
 end
