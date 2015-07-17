@@ -1,9 +1,10 @@
+Click on an album name to see all photos in that album.
 <% albums = Album.all %>
 <% i = 1 %>
 <% while i <= albums.length do %>
   <% item = Album.find(i) %>
   <ul>
-  <li><%= item.album_title %></li>
+  <li><a href="/photos_in_album/<%= item.id %>"><%= item.album_title %></a></li>
   </ul>
   <% i += 1 %>
 <% end %>

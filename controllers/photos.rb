@@ -15,6 +15,11 @@ get "/read_photos" do
   erb :"/photos/photos"
 end
 
+get "/albums_with_photo/:x" do
+  @item = Photo.find(params["x"])
+  erb :"/photos/albums_with_photo"
+end
+
 get "/update_list" do
   erb :"/photos/update_list"
 end

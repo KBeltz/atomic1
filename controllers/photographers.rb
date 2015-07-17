@@ -15,6 +15,11 @@ get "/read_photographers" do
   erb :"/photographers/photographers"
 end
 
+get "/photos_by_photographer/:x" do
+  @item = Photographer.find(params["x"])
+  erb :"/photographers/photos_by_photographer"
+end
+
 # get "/update_list" do
 #   erb :"/photographers/update_list"
 # end
