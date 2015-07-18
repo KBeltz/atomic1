@@ -30,11 +30,22 @@ get "/edit_photo_row/:x" do
 end
 
 get "/save_edited_photo" do
-  @item = Photo.find(params["x"])
-  @item.title = params["title"]
-  @item.photographer_id = params["photographer_id"]
-  @item.save
-  erb :"/photos/photos"
+  a = params["album_id"]
+  if a.empty? == false
+    @item = Photo.find(params["x"])
+    @item.title = params["title"]
+    @item.photographer_id = params["photographer_id"]
+    album = Album.find(params["album_id"])
+    album.photos << @item
+    @item.save
+    album.save
+  else
+    @item = Photo.find(params["x"])
+    @item.title = params["title"]
+    @item.photographer_id = params["photographer_id"]
+    @item.save
+  end
+  erb :"/main/success"
 end
 
 get "/delete_photos" do

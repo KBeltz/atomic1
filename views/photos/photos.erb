@@ -2,6 +2,11 @@ Click on a photo to see a list of albums to which it belongs.
 <% photos = Photo.all %>
 <% photos.each do |item| %>
   <ul>
-    <li><a href="/albums_with_photo/<%= item.id %>"><%= item.title %></a></li>
+    <% if Photo.top_photo?(item) == true %>
+      <li><img src="https://addons.cdn.mozilla.net/user-media/addon_icons/506/506646-64.png?modified=1436470754">
+      <a href="/albums_with_photo/<%= item.id %>"><%= item.title %></a></li>
+    <% else %>
+      <li><a href="/albums_with_photo/<%= item.id %>"><%= item.title %></a></li>
+    <% end %>
   </ul>
 <% end %>
