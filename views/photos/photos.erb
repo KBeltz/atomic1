@@ -1,10 +1,10 @@
 Click on a photo to see a list of albums to which it belongs.
+<img id="top_photo" src="../badger.png"> indicates top photo.
 <% photos = Photo.all %>
 <% photos.each do |item| %>
   <ul>
     <% if Photo.top_photo?(item) == true %>
-      <li><img src="https://addons.cdn.mozilla.net/user-media/addon_icons/506/506646-64.png?modified=1436470754">
-      <a href="/albums_with_photo/<%= item.id %>"><%= item.title %></a></li>
+      <li><a href="/albums_with_photo/<%= item.id %>"><%= item.title %></a> <img id="top_photo" src="../badger.png"></li>
     <% else %>
       <li><a href="/albums_with_photo/<%= item.id %>"><%= item.title %></a></li>
     <% end %>
