@@ -1,21 +1,8 @@
-Edit album title
 <br>
 choose album:
 <% albums = Album.all %>
 <% albums.each do |item| %>
-    <a href="/edit_album_row/<%= item.id %>"><%= item.album_title %></a>
+  <ul>
+    <li><a href="/edit_album_row/<%= item.id %>"><%= item.album_title %></a><li>
+  </ul>
 <% end %>
-
-
-
-<!-- New photo
-<form action=" ">
-  choose album
-  <input type="text" name="title">
-  <input type="submit" value="add new photo to album">
-
-Assign existing photo by title
-<form action=" ">
-  choose album
-  <input type="text" name="title">
-  <input type="submit" value="add photo to album"> -->

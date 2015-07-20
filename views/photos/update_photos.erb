@@ -1,7 +1,8 @@
-Edit photo
 <br>
 choose photo:
 <% photos = Photo.all %>
 <% photos.each do |item| %>
-    <a href="/edit_photo_row/<%= item.id %>"><%= item.title %></a>
+  <ul>
+    <li><a href="/edit_photo_row/<%= item.id %>"><%= item.title %></a></li>
+  </ul>
 <% end %>

@@ -1,27 +1,8 @@
-Edit photographer
-
 <br>
 choose photographer:
 <% photographers = Photographer.all %>
 <% photographers.each do |item| %>
-    <a href="/edit_photographer_row/<%= item.id %>"><%= item.name %></a>
+  <ul>
+    <li><a href="/edit_photographer_row/<%= item.id %>"><%= item.name %></a></li>
+  </ul>
 <% end %>
-
-<!-- Edit photographer name
-<form action=" ">
-  choose photographer
-  <input type="text" name="name">
-  <input type="submit" value="edit photographer">
-</form>
-
-New photo
-<form action=" ">
-  choose photographer
-  <input type="text" name="title">
-  <input type="submit" value="add new photo to photographer">
-
-Assign existing photo by title
-<form action=" ">
-  choose photographer
-  <input type="text" name="title">
-  <input type="submit" value="add photo to photographer"> -->
