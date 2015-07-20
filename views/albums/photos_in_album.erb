@@ -1,7 +1,13 @@
 Photos in <%= @item.album_title %>
+<br>
+<img id="top_photo" src="../badger.png"> indicates top photo.
 <% list = @item.photos %>
 <% list.each do |a| %>
 <ul>
-  <li><%= a.title %></li>
+  <% if Photo.top_photo?(a) == true %>
+    <li><%= a.title %> <img id="top_photo" src="../badger.png"></li>
+  <% else %>
+    <li><%= a.title %></li>
+  <% end %>
 </ul>
 <% end %>
